@@ -19,7 +19,7 @@ namespace TDD.Test.Tests
 		{
 			var list = new List<int> { 1, 2, 3, 4, 5 };
 			var result = TDD.UI.Calculation.Ave(list);
-			Assert.AreEqual(5, result);
+			Assert.AreEqual(3, result);
 		}
 	}
 }
