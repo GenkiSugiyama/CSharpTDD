@@ -2,9 +2,9 @@ C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\bin\Debug\TDD.UI.exe.
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\bin\Debug\TDD.UI.exe
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\bin\Debug\TDD.UI.pdb
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.csprojAssemblyReference.cache
-C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.Form1.resources
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.Properties.Resources.resources
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.csproj.GenerateResource.cache
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.csproj.CoreCompileInputs.cache
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.exe
 C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.pdb
+C:\Users\gen-sugiyama\SelfStudy\Udemy\CSharpTDD\TDD\TDD.UI\obj\Debug\TDD.UI.Form1View.resources

@@ -12,6 +12,8 @@ namespace TDD.UI
 {
 	public partial class Form1View : Form
 	{
+		// ViewにViewModelを持たせる
+		private Form1ViewModel _viewModel = new Form1ViewModel();
 		public Form1View()
 		{
 			InitializeComponent();
@@ -29,10 +31,9 @@ namespace TDD.UI
 
 		private void CalculationButton_Click(object sender, EventArgs e)
 		{
-			int a = Convert.ToInt32(ATextBox.Text);
-			int b = Convert.ToInt32(BTextBox.Text);
-
-			ResultLabel.Text = Calculation.Sum(a, b).ToString();
+			// 画面上のアクションが発生したらViewModelのメソッドを呼び出す
+			// データバインドがされていないのでまだ入力値はViewModelに渡されていない状態
+			_viewModel.CalculationAction();
 		}
 	}
 }
