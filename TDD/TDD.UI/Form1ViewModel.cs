@@ -69,7 +69,7 @@ namespace TDD.UI
 			}
 		}
 
-        public void CalculationAction()
+		public void CalculationAction()
 		{
 			int a = Convert.ToInt32(ATextBoxText);
 			int b = Convert.ToInt32(BTextBoxText);
