@@ -31,7 +31,7 @@ namespace TDD.UI
 		// OnPropertyChanged メソッドはプロパティのセッター内に記述
 		// 別の値がセットされたタイミングでOnPropertyChangedを呼び出すことでView側に変更を通知する
 		private string _aTextBoxText = string.Empty;
-        public string ATextBoxText
+		public string ATextBoxText
 		{
 			get { return _aTextBoxText; }
 			set
@@ -43,8 +43,8 @@ namespace TDD.UI
 			}
 		}
 
-        private string _bTextBoxText = string.Empty;
-        public string BTextBoxText
+		private string _bTextBoxText = string.Empty;
+		public string BTextBoxText
 		{
 			get { return _bTextBoxText; }
 			set
@@ -56,18 +56,18 @@ namespace TDD.UI
 			}
 		}
 
-        private string _resultLabelText = string.Empty;
-        public string ResultLabelText
-        {
-            get { return _resultLabelText; }
-            set
-            {
-                if (_resultLabelText == value) return;
+		private string _resultLabelText = string.Empty;
+		public string ResultLabelText
+		{
+			get { return _resultLabelText; }
+			set
+			{
+				if (_resultLabelText == value) return;
 
-                _resultLabelText = value;
-                OnPropertyChanged("ResultLabelText");
-            }
-        }
+				_resultLabelText = value;
+				OnPropertyChanged("ResultLabelText");
+			}
+		}
 
         public void CalculationAction()
 		{

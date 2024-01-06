@@ -20,7 +20,7 @@ namespace TDD.UI
 
 			// コントロールとViewModelプロパティを紐づけるためにDataBindings.Addを使用する
 			ATextBox.DataBindings.Add("Text", _viewModel, "ATextBoxText");
-            BTextBox.DataBindings.Add("Text", _viewModel, "BTextBoxText");
+			BTextBox.DataBindings.Add("Text", _viewModel, "BTextBoxText");
 			ResultLabel.DataBindings.Add("Text", _viewModel, "ResultLabelText");
         }
 
