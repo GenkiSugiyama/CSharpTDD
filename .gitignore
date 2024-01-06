@@ -1,1 +1,5 @@
-TDD/.vs
+.vs
+TDD/TDD.UI/obj
+TDD/TDD.UI/bin
+TDD/TDD.Test.Tests/obj/
+TDD/TDD.Test.Tests/bin/

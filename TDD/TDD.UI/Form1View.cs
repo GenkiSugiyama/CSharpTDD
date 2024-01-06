@@ -17,9 +17,14 @@ namespace TDD.UI
 		public Form1View()
 		{
 			InitializeComponent();
-		}
 
-		private void Form1_Load(object sender, EventArgs e)
+			// コントロールとViewModelプロパティを紐づけるためにDataBindings.Addを使用する
+			ATextBox.DataBindings.Add("Text", _viewModel, "ATextBoxText");
+            BTextBox.DataBindings.Add("Text", _viewModel, "BTextBoxText");
+			ResultLabel.DataBindings.Add("Text", _viewModel, "ResultLabelText");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
 		{
 
 		}
@@ -32,8 +37,7 @@ namespace TDD.UI
 		private void CalculationButton_Click(object sender, EventArgs e)
 		{
 			// 画面上のアクションが発生したらViewModelのメソッドを呼び出す
-			// データバインドがされていないのでまだ入力値はViewModelに渡されていない状態
 			_viewModel.CalculationAction();
 		}
-	}
+    }
 }
