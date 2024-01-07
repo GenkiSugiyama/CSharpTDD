@@ -10,13 +10,15 @@ namespace TDD.UI
 	// View上の変更をViewModelに通知（ViewとViewModelの連動）するためにINotifyPropertyChangedをViewModelで実装する
 	public class Form1ViewModel : INotifyPropertyChanged
 	{
-		//WEbForms上の入出力に関連のコントロールに対応するプロパティを作ることで画面(View)に対応したモデル(ViewModel)を作成する
-		//private System.Windows.Forms.TextBox ATextBox;
-		//private System.Windows.Forms.TextBox BTextBox;
-		//private System.Windows.Forms.Label label1;
-		//private System.Windows.Forms.Label label2;
-		//private System.Windows.Forms.Label ResultLabel;
-		//private System.Windows.Forms.Button CalculationButton;
+		
+		private IDB _db;
+
+        // インタフェースをプライベート変数として持つようにする
+        // このクラスを使用する際の初期化時に外から本番用のDBクラスかテスト用のDBMockクラスかを注入する（実装者が選べる）
+        public Form1ViewModel(IDB db)
+		{
+			_db = db;
+		}
 
 		// INotifyPropertyChangedの実装（プロパティ・メソッド）
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -74,7 +76,9 @@ namespace TDD.UI
 			int a = Convert.ToInt32(ATextBoxText);
 			int b = Convert.ToInt32(BTextBoxText);
 
-			ResultLabelText = Calculation.Sum(a, b).ToString();
+			// 画面の入力値にDBからの値を足し合わせる機能に変更
+			int dbValue = _db.GetDBValue();
+			ResultLabelText = (Calculation.Sum(a, b) + dbValue).ToString();
 		}
 	}
 }

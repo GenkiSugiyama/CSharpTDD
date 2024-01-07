@@ -13,7 +13,8 @@ namespace TDD.UI
 	public partial class Form1View : Form
 	{
 		// ViewにViewModelを持たせる
-		private Form1ViewModel _viewModel = new Form1ViewModel();
+		// 本番用のコードでは本番用DBクラスを注入する
+		private Form1ViewModel _viewModel = new Form1ViewModel(new DB());
 		public Form1View()
 		{
 			InitializeComponent();
