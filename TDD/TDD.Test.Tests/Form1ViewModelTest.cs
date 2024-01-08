@@ -14,7 +14,7 @@ namespace TDD.Test.Tests
 			// Moqを入れるとMockクラスを自作する必要がなくなる
 			var mock = new Mock<IDB>();
 			// Setup().Returns()でテストに使用するメソッドの返り値を指定する
-			mock.Setup(x => x.GetDBValue()).Returns(100);
+			mock.Setup(x => x.GetDBValue()).Returns(200);
 			// mock.Objectに実際のインスタンスが入っているのでそれを注入する
 			var viewModel = new Form1ViewModel(mock.Object);
 
@@ -32,7 +32,7 @@ namespace TDD.Test.Tests
 			// そのためテスト時には直接DBから値をとらずにDBから取得する値と同じ型の値を返すメソッドをもつMockクラスを使用する
 			// インタフェースを切って本番用クラスとテスト用Mockクラスで実装コードを書き、本番環境では本番クラスをテスト環境ではMockクラスを使用して動作させる
 			viewModel.CalculationAction();
-			Assert.AreEqual("107", viewModel.ResultLabelText);
+			Assert.AreEqual("207", viewModel.ResultLabelText);
 		}
 	}
 }
