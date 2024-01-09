@@ -11,6 +11,19 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             Assert.AreEqual(3, Class1.Add(1, 2));
+
+            // ChainingAssertion
+            // AssertEx.Throws()で意図したエラーが返ってくるかが確認可能
+            // Throws()のコールバック関数としてテストしたいクラスのメソッドを書く
+            AssertEx.Throws<InputException>(() => Class1.Add(-1, 2));
+
+            // AssetEx.Throws()は指定した型を受け取ることもできるので今回だとエラーのメッセージ内容まで確認可能
+            var ex = AssertEx.Throws<InputException>(() => Class1.Add(-1, 2)); // ←でexにthrowｓされたエラーが入る
+            Assert.AreEqual("マイナス値は入力できません", ex.Message); // ←ex.Message.Is("マイナス値は入力できません") とも書ける
+
+            // ChainingAssertionによって正常系のテストもわかりやすく書ける
+            // {メソッドやプロパティ呼び出し}.Is(期待値)で結果をテストできる
+            Class1.Add(1, 2).Is(3);
         }
 
         /// <summary>
