@@ -31,7 +31,7 @@ namespace UnitTestProject1
         {
             // ChainingAssertionによって正常系のテストもわかりやすく書ける
             // {メソッドやプロパティ呼び出し}.Is(期待値)で結果をテストできる
-            Class1.Add(3, 2).Is(5);
+            Class1.Add(3, 2).Is(6);
 
             // ChainingAssertion
             // AssertEx.Throws()で意図したエラーが返ってくるかが確認可能
