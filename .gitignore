@@ -1,10 +1,5 @@
 .vs
-TDD/TDD.UI/obj
-TDD/TDD.UI/bin
-TDD/TDD.Test.Tests/obj/
-TDD/TDD.Test.Tests/bin/
-HowToDealExceptionTest/HowToDealExceptionTest/obj
-HowToDealExceptionTest/HowToDealExceptionTest/bin
-HowToDealExceptionTest/UnitTestProject1/obj/
-HowToDealExceptionTest/UnitTestProject1/bin/
 **/[Pp]ackages/*
+**/[Oo]bj/*
+**/[Bb]in/*
+
