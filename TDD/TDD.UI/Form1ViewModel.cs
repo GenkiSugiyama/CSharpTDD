@@ -58,7 +58,7 @@ namespace TDD.UI
 			}
 		}
 
-		private string _resultLabelText = string.Empty;
+        private string _resultLabelText = string.Empty;
 		public string ResultLabelText
 		{
 			get { return _resultLabelText; }
@@ -71,7 +71,33 @@ namespace TDD.UI
 			}
 		}
 
-		public void CalculationAction()
+        private string _productIdTextBoxText = string.Empty;
+        public string ProductIdTextBoxText
+        {
+            get { return _productIdTextBoxText; }
+            set
+            {
+                if (_productIdTextBoxText == value) return;
+
+                _productIdTextBoxText = value;
+                OnPropertyChanged("ProductIdTextBoxText");
+            }
+        }
+
+        private string _productNameTextBoxText = string.Empty;
+        public string ProductNameTextBoxText
+        {
+            get { return _productNameTextBoxText; }
+            set
+            {
+                if (_productNameTextBoxText == value) return;
+
+                _productNameTextBoxText = value;
+                OnPropertyChanged("ProductIdTextBoxText");
+            }
+        }
+
+        public void CalculationAction()
 		{
 			int a = Convert.ToInt32(ATextBoxText);
 			int b = Convert.ToInt32(BTextBoxText);
@@ -80,5 +106,21 @@ namespace TDD.UI
 			int dbValue = _db.GetDBValue();
 			ResultLabelText = (Calculation.Sum(a, b) + dbValue).ToString();
 		}
-	}
+
+        public void ProductCommand()
+        {
+			Product product = _db.GetProduct();
+			ProductIdTextBoxText = product.ProductId.ToString();
+			ProductNameTextBoxText = product.ProductName.ToString();
+        }
+
+        public void Save()
+        {
+			var product = new Product(
+				Convert.ToInt32(ProductIdTextBoxText),
+				ProductNameTextBoxText);
+
+			_db.SaveProduct(product);
+        }
+    }
 }

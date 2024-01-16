@@ -15,5 +15,15 @@ namespace TDD.UI
             // 実際はDBの値を取得し返却するが簡略化のため固定値を返す
             return 200;
         }
+
+        public Product GetProduct()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SaveProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
